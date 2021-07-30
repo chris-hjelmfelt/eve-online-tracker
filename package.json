@@ -4,8 +4,10 @@
   "description": "Look up information for eve online players, alliances, locations, etc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index"
+    "start": "node server",
+    "server": "nodemon index",
+    "client": "npm run serve --prefix client",
+    "dev": "concurrently \"npm run server\" \" npm run client\""
   },
   "author": "Chris H",
   "license": "ISC",
